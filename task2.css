@@ -1,0 +1,292 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  color: #4e342e;
+  background-color: #f8f3f0;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #4a2c2a;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo span {
+  color: #8b5e3c;
+}
+
+.logo-icon {
+  width: 30px;
+  height: 30px;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+.nav-links li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.nav-links li a::after {
+  content: "🌿";
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+}
+.nav-links li a:hover::after {
+  opacity: 1;
+  bottom: -5px;
+}
+.nav-links li a:hover {
+  color: #8b5e3c;
+}
+
+
+.nav-btn {
+  background: #8b5e3c;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+}
+.nav-btn:hover {
+  background: #4a2c2a;
+}
+
+
+.hero {
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background: url("./photostask2/beautiful-spa-composition-brown-wall-space-text_169016-1687.avif") no-repeat center center/cover;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  background: #8b5e3c;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.hero-btn:hover {
+  background: #4a2c2a;
+}
+
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 8%;
+  gap: 2rem;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-img img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+
+.products {
+  text-align: center;
+  padding: 4rem 8%;
+}
+
+.products h2 {
+  color: #5d4037;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.product-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+
+.contact {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #d7ccc8;
+}
+
+.contact h2 {
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  margin-bottom: 1.5rem;
+}
+
+
+.footer {
+  background: #5d4037;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+
+#hero-text {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  min-height: 50px;
+}
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #8d6e63;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+
+#topBtn:hover {
+  background: #6d4c41;
+}
+.email-btn {
+  display: inline-block;
+  background-color: #8B4513; 
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px; 
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.email-btn:hover {
+  background-color: #5c2e0e; 
+}
+.leaf {
+  position: fixed;
+  top: -50px;
+  width: 30px;
+  height: 30px;
+  background-image: url("./photostask2/leaves-01-brown-maple-leaf-png-clipart-removebg-preview.png"); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  pointer-events: none;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+  
+}
+
+
+
+

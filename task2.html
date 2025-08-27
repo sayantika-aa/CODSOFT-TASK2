@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SAYANTIKA GLOW-CARE</title>
+  <link rel="stylesheet" href="task2.css">
+</head>
+<body>
+
+  <header>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./photostask2/pngtree-skincare-logo-png-image_6325549.png" alt="logo" class="logo-icon">
+      SAYANTIKA<span>GLOW-CARE</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">About</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#" class="nav-btn">Shop Now</a></li>
+    </ul>
+  </nav>
+</header>
+ 
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Sayantika GlowCare</h1>
+      <p>Natural skincare crafted with love for your radiant beauty.</p>
+      <a href="#products" class="hero-btn">Shop Now</a>
+    </div>
+  </section>
+
+
+
+
+  <section id="about" class="about fade-in">
+    <div class="about-text">
+      <h2>Why Choose Us?</h2>
+      <p>
+        At Sayantika GlowCare, we believe in skincare rooted in nature. 
+        Our products are free from harmful chemicals, enriched with natural ingredients, 
+        and carefully crafted to bring out your skin’s inner glow.
+        At GlowCare, we are committed to delivering skincare solutions that combine nature and science. Each product is formulated with safe, high-quality ingredients that restore balance and radiance. With a focus on trust, 
+        innovation, and long-term results, we ensure that your skin receives the care it truly deserves, every single day.
+      </p>
+    </div>
+    <div class="about-img">
+     <img src="./photostask2/human.jpg" alt="Natural Ingredients">
+  </section>
+
+  
+  <section id="products" class="products fade-in">
+    <h2>Our Bestsellers</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="./photostask2/Natural-ingredients-for-perfect-skin-care.webp" alt="Skincare Product">
+        <h3>Herbal Glow Cream</h3>
+        <p>Infused with aloe vera & turmeric for radiant skin.</p>
+      </div>
+      <div class="product-card">
+        <img src="./photostask2/Rose-hydrosols.webp" alt="Skincare Product">
+        <h3>Rose Face Mist</h3>
+        <p>Refreshing mist that hydrates & tones naturally.</p>
+      </div>
+      <div class="product-card">
+        <img src="./photostask2/66f77b7d9afe7e3306714bf6_ktc-coffee-grounds-1.jpg" alt="Skincare Product">
+        <h3>Coffee Scrub</h3>
+        <p>Exfoliates gently leaving skin smooth & fresh.</p>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section id="contact" class="contact fade-in">
+    <h2>Get in Touch</h2>
+    <p>We’d love to hear from you! Reach out for queries or collaborations.</p>
+    <a href="mailto:sayantikachoudhuri907@gmail.com" class="email-btn">Email Us</a>
+  </section>
+
+ 
+  <button id="topBtn">↑</button>
+
+ 
+  <footer class="footer">
+    <p>&copy; 2025 Sayantika GlowCare | All Rights Reserved</p>
+  </footer>
+
+  
+  <script src="task2.js"></script>
+
+  <script>
+  function createLeaf() {
+    const leaf = document.createElement("div");
+    leaf.classList.add("leaf");
+    leaf.style.left = Math.random() * window.innerWidth + "px";
+    leaf.style.animationDuration = (4 + Math.random() * 5) + "s"; 
+    document.body.appendChild(leaf);
+
+    setTimeout(() => {
+      leaf.remove();
+    }, 9000);
+  }
+
+  setInterval(createLeaf, 400);
+</script>
+
+
+</body>
+</html>
+
